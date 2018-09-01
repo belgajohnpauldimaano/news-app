@@ -9,9 +9,6 @@
       <v-spacer></v-spacer>
     </v-toolbar>
     <ArticlesPage/>
-    <v-footer :fixed="true" app>
-      <span>&copy; 2017</span>
-    </v-footer>
   </v-app>
 </template>
 
