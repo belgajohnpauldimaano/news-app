@@ -1,17 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-toolbar
+      app
+      color="blue darken-4"
+      dark
+    >
+      <v-toolbar-title color="x" v-text="title"></v-toolbar-title>
+      <v-spacer></v-spacer>
+    </v-toolbar>
+    <ArticlesPage/>
+    <v-footer :fixed="true" app>
+      <span>&copy; 2017</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ArticlesPage from './pages/ArticlesPage'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    ArticlesPage
+  },
+  data () {
+    return {
+      title: "News"
+    }
   }
 }
 </script>
